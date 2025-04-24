@@ -3,13 +3,16 @@ import argparse
 import shutil
 from pathlib import Path
 from commands.base import BaseCommand
+from core.system_state import SystemState
 
 class ClearCommand(BaseCommand):
     def __init__(self, project_root: Path):
         self.project_root = project_root
         self.default_output_dir = project_root / "dir_output"
         self.default_output_dir_tmp = project_root / "dir_temp"
-        self.default_output_dir_tmp = project_root / "dir_logs"
+        self.default_output_dir_logs = project_root / "dir_logs"
+        self.state = SystemState()
+
 
     @property
     def name(self) -> str:
@@ -37,6 +40,8 @@ class ClearCommand(BaseCommand):
         )
 
     def execute(self, args):
+        print("Инициализация...") 
+        self.state.set_state("uninitialized")   
         # Определяем целевые директории
         target_dirs = []
         
@@ -45,6 +50,7 @@ class ClearCommand(BaseCommand):
         else:
             target_dirs.append(self.default_output_dir)
             target_dirs.append(self.default_output_dir_tmp)
+            target_dirs.append(self.default_output_dir_logs)
         
         # Выводим информацию о текущей рабочей директории
         print(f"\nWorking directory: {Path.cwd()}")
@@ -88,3 +94,6 @@ class ClearCommand(BaseCommand):
                 shutil.rmtree(item)
             else:
                 item.unlink()
+
+    def _check_preconditions(self):
+        return self.state.state == "uninitialized"                

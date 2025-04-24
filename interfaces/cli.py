@@ -4,11 +4,12 @@ from pathlib import Path
 from commands.registry import CommandRegistry
 
 class CLI:
-    def __init__(self):
+    def __init__(self, interactive_mode=False):
         self.project_root = Path(__file__).parent.parent
         self.registry = CommandRegistry(self.project_root)
         self.commands = self.registry.instantiate_commands()
         self.parser = self._create_root_parser()
+        self.interactive_mode = interactive_mode
 
     def _create_root_parser(self):
         parser = argparse.ArgumentParser(
@@ -35,9 +36,13 @@ class CLI:
 
     def run(self):
         args = self.parser.parse_args()
+
+        if self.interactive_mode and not args.command:
+            return  # Пропускаем в интерактивном режиме
+
         if not args.command:
             self._print_help()
-            return
+            return            
         
         if hasattr(args, 'handler'):
             args.handler(args)
