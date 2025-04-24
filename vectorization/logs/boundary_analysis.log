@@ -1,0 +1,878 @@
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:44) ===
+Found block start at line 13 (prev line) named 'enum'
+Found block end at line 20 (previous line) named 'enum'
+This is same file? 'False' /n
+Found block start at line 23 (prev line) named 'EXCHANGE_SETTINGS::EXCHANGE_SETTINGS()'
+Found block end at line 31 (previous line) named 'EXCHANGE_SETTINGS::EXCHANGE_SETTINGS()'
+This is same file? 'False' /n
+Found block start at line 34 (prev line) named 'CNFC_Device::CNFC_Device(HidDeviceDescr* dev,CWnd * wndNotify,CProgressCtrl * progr):evRunning(0,1),evBreak(0,1), evService(0,1)'
+Found block end at line 70 (previous line) named 'CNFC_Device::CNFC_Device(HidDeviceDescr* dev,CWnd * wndNotify,CProgressCtrl * progr):evRunning(0,1),evBreak(0,1), evService(0,1)'
+This is same file? 'False' /n
+Found block start at line 73 (prev line) named 'CNFC_Device::~CNFC_Device()//destructor'
+Found block end at line 85 (previous line) named 'CNFC_Device::~CNFC_Device()//destructor'
+This is same file? 'False' /n
+Found block start at line 88 (prev line) named 'bool CNFC_Device::CheckCRC(CNFC_Command* c)'
+Found block end at line 181 (previous line) named 'bool CNFC_Device::CheckCRC(CNFC_Command* c)'
+This is same file? 'False' /n
+Found block start at line 184 (prev line) named 'DWORD WINAPI CNFC_Device::CommandThread(void* ptr)'
+
+Total lines processed: 0
+Total brackets found: 5
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 5,
+  "total_size": 3391,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:44) ===
+Found block end at line 202 (previous line) named 'DWORD WINAPI CNFC_Device::CommandThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 205 (prev line) named 'bool CNFC_Device::IsBreak()'
+Found block end at line 207 (previous line) named 'bool CNFC_Device::IsBreak()'
+This is same file? 'True' /n
+Found block start at line 210 (prev line) named 'bool CNFC_Device::IsInCommand()'
+Found block end at line 212 (previous line) named 'bool CNFC_Device::IsInCommand()'
+This is same file? 'True' /n
+Found block start at line 215 (prev line) named 'bool CNFC_Device::IsInService()'
+Found block end at line 217 (previous line) named 'bool CNFC_Device::IsInService()'
+This is same file? 'True' /n
+Found block start at line 220 (prev line) named 'bool CNFC_Device::SendCommand(UINT nCommand, CByteArray * send,CByteArray * get, bool bForce)'
+
+Total lines processed: 0
+Total brackets found: 4
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 9,
+  "total_size": 4008,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:44) ===
+Found block end at line 19 (previous line) named 'bool CNFC_Device::SendCommand(UINT nCommand, CByteArray * send,CByteArray * get, bool bForce)'
+This is same file? 'True' /n
+Found block start at line 22 (prev line) named 'bool CNFC_Device::SwitchOn()'
+Found block end at line 31 (previous line) named 'bool CNFC_Device::SwitchOn()'
+This is same file? 'True' /n
+Found block start at line 34 (prev line) named 'bool CNFC_Device::SwitchOff()'
+Found block end at line 43 (previous line) named 'bool CNFC_Device::SwitchOff()'
+This is same file? 'True' /n
+Found block start at line 46 (prev line) named 'bool CNFC_Device::GetAnswer(bool bSleepAfter,UINT nTimeout)'
+Found block end at line 58 (previous line) named 'bool CNFC_Device::GetAnswer(bool bSleepAfter,UINT nTimeout)'
+This is same file? 'True' /n
+Found block start at line 61 (prev line) named 'bool CNFC_Device::SendBuffer(BYTE* data, BYTE nBlock,bool bSleepAfter)'
+Found block end at line 85 (previous line) named 'bool CNFC_Device::SendBuffer(BYTE* data, BYTE nBlock,bool bSleepAfter)'
+This is same file? 'True' /n
+Found block start at line 88 (prev line) named 'bool CNFC_Device::GetBuffer(BYTE nBlock, bool bGetLog, UINT nTimeout)'
+Found block end at line 142 (previous line) named 'bool CNFC_Device::GetBuffer(BYTE nBlock, bool bGetLog, UINT nTimeout)'
+This is same file? 'True' /n
+Found block start at line 145 (prev line) named 'bool CNFC_Device::Write(BYTE* data, UINT nLen)'
+Found block end at line 149 (previous line) named 'bool CNFC_Device::Write(BYTE* data, UINT nLen)'
+This is same file? 'True' /n
+Found block start at line 152 (prev line) named 'bool CNFC_Device::SendCountByte(UINT nCount)'
+Found block end at line 166 (previous line) named 'bool CNFC_Device::SendCountByte(UINT nCount)'
+This is same file? 'True' /n
+Found block start at line 169 (prev line) named 'bool CNFC_Device::SendE140FF01()'
+Found block end at line 183 (previous line) named 'bool CNFC_Device::SendE140FF01()'
+This is same file? 'True' /n
+Found block start at line 187 (prev line) named 'bool CNFC_Device::Blink()'
+Found block end at line 189 (previous line) named 'bool CNFC_Device::Blink()'
+This is same file? 'True' /n
+Found block start at line 192 (prev line) named 'bool CNFC_Device::Beep()'
+Found block end at line 194 (previous line) named 'bool CNFC_Device::Beep()'
+This is same file? 'True' /n
+Found block start at line 198 (prev line) named 'bool CNFC_Device::SetSerialNumber(UINT nNum)'
+Found block end at line 203 (previous line) named 'bool CNFC_Device::SetSerialNumber(UINT nNum)'
+This is same file? 'True' /n
+Found block start at line 206 (prev line) named 'bool CNFC_Device::SetLogTimeout(BYTE nTimeout)'
+Found block end at line 211 (previous line) named 'bool CNFC_Device::SetLogTimeout(BYTE nTimeout)'
+This is same file? 'True' /n
+Found block start at line 214 (prev line) named 'bool CNFC_Device::SetWeekToScale(BYTE nWeeks)'
+Found block end at line 218 (previous line) named 'bool CNFC_Device::SetWeekToScale(BYTE nWeeks)'
+This is same file? 'True' /n
+Found block start at line 221 (prev line) named 'bool CNFC_Device::Reboot()'
+Found block end at line 226 (previous line) named 'bool CNFC_Device::Reboot()'
+This is same file? 'True' /n
+Found block start at line 229 (prev line) named 'bool CNFC_Device::ReplaceBattery()'
+Found block end at line 231 (previous line) named 'bool CNFC_Device::ReplaceBattery()'
+This is same file? 'True' /n
+Found block start at line 234 (prev line) named 'bool CNFC_Device::EnableBeep(bool bEnable)'
+Found block end at line 238 (previous line) named 'bool CNFC_Device::EnableBeep(bool bEnable)'
+This is same file? 'True' /n
+Found block start at line 241 (prev line) named 'bool CNFC_Device::EnableVibro(bool bEnable)'
+Found block end at line 245 (previous line) named 'bool CNFC_Device::EnableVibro(bool bEnable)'
+This is same file? 'True' /n
+Found block start at line 248 (prev line) named 'bool CNFC_Device::EnableAlarm(bool bEnable)'
+Found block end at line 252 (previous line) named 'bool CNFC_Device::EnableAlarm(bool bEnable)'
+This is same file? 'True' /n
+Found block start at line 255 (prev line) named 'bool CNFC_Device::EnableNFCPowerDown(bool bEnable)'
+
+Total lines processed: 0
+Total brackets found: 19
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 28,
+  "total_size": 8026,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 3 (previous line) named 'bool CNFC_Device::EnableNFCPowerDown(bool bEnable)'
+This is same file? 'True' /n
+Found block start at line 6 (prev line) named 'bool CNFC_Device::SetDeviceMode(UINT nMode)'
+Found block end at line 10 (previous line) named 'bool CNFC_Device::SetDeviceMode(UINT nMode)'
+This is same file? 'True' /n
+Found block start at line 14 (prev line) named 'bool CNFC_Device::SetDateTime(UINT nTime,bool bDaylightSave)'
+Found block end at line 20 (previous line) named 'bool CNFC_Device::SetDateTime(UINT nTime,bool bDaylightSave)'
+This is same file? 'True' /n
+Found block start at line 23 (prev line) named 'bool CNFC_Device::GetDeviceInfo(bool bClearVer, bool bOnlyInfo, bool bForce)'
+Found block end at line 28 (previous line) named 'bool CNFC_Device::GetDeviceInfo(bool bClearVer, bool bOnlyInfo, bool bForce)'
+This is same file? 'True' /n
+Found block start at line 31 (prev line) named 'void DEVICE_INFO::FillSWVer()'
+Found block end at line 34 (previous line) named 'void DEVICE_INFO::FillSWVer()'
+This is same file? 'True' /n
+Found block start at line 37 (prev line) named 'bool CNFC_Device::ParseDeviceInfo(CByteArray* arr)'
+Found block end at line 105 (previous line) named 'bool CNFC_Device::ParseDeviceInfo(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 108 (prev line) named 'bool CNFC_Device::GetAllCoeffs()'
+Found block end at line 111 (previous line) named 'bool CNFC_Device::GetAllCoeffs()'
+This is same file? 'True' /n
+Found block start at line 114 (prev line) named 'bool CNFC_Device::GetCoeffsOnly()'
+Found block end at line 117 (previous line) named 'bool CNFC_Device::GetCoeffsOnly()'
+This is same file? 'True' /n
+Found block start at line 120 (prev line) named 'bool CNFC_Device::ParseSensorsInfo(CByteArray* arr)'
+Found block end at line 162 (previous line) named 'bool CNFC_Device::ParseSensorsInfo(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 165 (prev line) named 'bool CNFC_Device::GetVibroPower()'
+Found block end at line 168 (previous line) named 'bool CNFC_Device::GetVibroPower()'
+This is same file? 'True' /n
+Found block start at line 171 (prev line) named 'bool CNFC_Device::GetGasRange()'
+Found block end at line 173 (previous line) named 'bool CNFC_Device::GetGasRange()'
+This is same file? 'True' /n
+Found block start at line 176 (prev line) named 'bool CNFC_Device::GetSensorVoltRange()'
+Found block end at line 178 (previous line) named 'bool CNFC_Device::GetSensorVoltRange()'
+This is same file? 'True' /n
+Found block start at line 181 (prev line) named 'bool CNFC_Device::ParseGasRange(CByteArray* arr)'
+Found block end at line 197 (previous line) named 'bool CNFC_Device::ParseGasRange(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 200 (prev line) named 'bool CNFC_Device::ParseSensorVRange(CByteArray* arr)'
+Found block end at line 212 (previous line) named 'bool CNFC_Device::ParseSensorVRange(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 215 (prev line) named 'bool CNFC_Device::SetO2Coeff()'
+Found block end at line 220 (previous line) named 'bool CNFC_Device::SetO2Coeff()'
+This is same file? 'True' /n
+Found block start at line 223 (prev line) named 'bool CNFC_Device::SetCOCoeff()'
+Found block end at line 228 (previous line) named 'bool CNFC_Device::SetCOCoeff()'
+This is same file? 'True' /n
+Found block start at line 231 (prev line) named 'bool CNFC_Device::SetH2SCoeff()'
+Found block end at line 236 (previous line) named 'bool CNFC_Device::SetH2SCoeff()'
+This is same file? 'True' /n
+Found block start at line 239 (prev line) named 'bool CNFC_Device::SetCH4Coeff()'
+Found block end at line 244 (previous line) named 'bool CNFC_Device::SetCH4Coeff()'
+This is same file? 'True' /n
+Found block start at line 247 (prev line) named 'bool CNFC_Device::SetCH4CoeffMult()'
+Found block end at line 255 (previous line) named 'bool CNFC_Device::SetCH4CoeffMult()'
+This is same file? 'True' /n
+
+Total lines processed: 0
+Total brackets found: 19
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 47,
+  "total_size": 14071,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block start at line 2 (prev line) named 'bool CNFC_Device::SetSensorAccel()'
+Found block end at line 7 (previous line) named 'bool CNFC_Device::SetSensorAccel()'
+This is same file? 'True' /n
+Found block start at line 10 (prev line) named 'bool CNFC_Device::SetGasRange()'
+Found block end at line 23 (previous line) named 'bool CNFC_Device::SetGasRange()'
+This is same file? 'True' /n
+Found block start at line 26 (prev line) named 'bool CNFC_Device::SetSensorVRange()'
+Found block end at line 37 (previous line) named 'bool CNFC_Device::SetSensorVRange()'
+This is same file? 'True' /n
+Found block start at line 41 (prev line) named 'bool CNFC_Device::GetSensorStatus()'
+Found block end at line 43 (previous line) named 'bool CNFC_Device::GetSensorStatus()'
+This is same file? 'True' /n
+Found block start at line 46 (prev line) named 'bool CNFC_Device::ParseSensorStatus(CByteArray* arr)'
+Found block end at line 54 (previous line) named 'bool CNFC_Device::ParseSensorStatus(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 57 (prev line) named 'bool CNFC_Device::SetSensorStatus()'
+Found block end at line 91 (previous line) named 'bool CNFC_Device::SetSensorStatus()'
+This is same file? 'True' /n
+Found block start at line 94 (prev line) named 'bool CNFC_Device::ParseVibroPower(CByteArray* arr)'
+Found block end at line 98 (previous line) named 'bool CNFC_Device::ParseVibroPower(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 101 (prev line) named 'bool CNFC_Device::SetVibroPower()'
+Found block end at line 105 (previous line) named 'bool CNFC_Device::SetVibroPower()'
+This is same file? 'True' /n
+Found block start at line 108 (prev line) named 'bool CNFC_Device::GetAlarms()'
+Found block end at line 110 (previous line) named 'bool CNFC_Device::GetAlarms()'
+This is same file? 'True' /n
+Found block start at line 113 (prev line) named 'bool CNFC_Device::ParseAlarms(CByteArray* arr)'
+Found block end at line 130 (previous line) named 'bool CNFC_Device::ParseAlarms(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 134 (prev line) named 'bool CNFC_Device::SetAlarms()'
+Found block end at line 148 (previous line) named 'bool CNFC_Device::SetAlarms()'
+This is same file? 'True' /n
+Found block start at line 151 (prev line) named 'bool CNFC_Device::GetSettings()'
+Found block end at line 153 (previous line) named 'bool CNFC_Device::GetSettings()'
+This is same file? 'True' /n
+Found block start at line 156 (prev line) named 'bool CNFC_Device::ParseSettings(CByteArray* arr)'
+Found block end at line 246 (previous line) named 'bool CNFC_Device::ParseSettings(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 249 (prev line) named 'bool CNFC_Device::SetSettings(bool bGet)'
+
+Total lines processed: 0
+Total brackets found: 13
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 60,
+  "total_size": 20367,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 86 (previous line) named 'bool CNFC_Device::SetSettings(bool bGet)'
+This is same file? 'True' /n
+Found block start at line 90 (prev line) named 'bool CNFC_Device::TestAlarm(UINT nAlarm)'
+Found block end at line 92 (previous line) named 'bool CNFC_Device::TestAlarm(UINT nAlarm)'
+This is same file? 'True' /n
+Found block start at line 95 (prev line) named 'bool CNFC_Device::GetLoraSettings()'
+Found block end at line 97 (previous line) named 'bool CNFC_Device::GetLoraSettings()'
+This is same file? 'True' /n
+Found block start at line 100 (prev line) named 'bool CNFC_Device::ParseLoraSettings(CByteArray* arr)'
+Found block end at line 131 (previous line) named 'bool CNFC_Device::ParseLoraSettings(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 134 (prev line) named 'bool CNFC_Device::SetLoraSettings()'
+Found block end at line 160 (previous line) named 'bool CNFC_Device::SetLoraSettings()'
+This is same file? 'True' /n
+Found block start at line 163 (prev line) named 'bool CNFC_Device::GetLoraKey()'
+Found block end at line 166 (previous line) named 'bool CNFC_Device::GetLoraKey()'
+This is same file? 'True' /n
+Found block start at line 169 (prev line) named 'bool CNFC_Device::ParseLoraKey(CByteArray* arr)'
+Found block end at line 186 (previous line) named 'bool CNFC_Device::ParseLoraKey(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 189 (prev line) named 'bool CNFC_Device::SetLoraKey()'
+Found block end at line 204 (previous line) named 'bool CNFC_Device::SetLoraKey()'
+This is same file? 'True' /n
+Found block start at line 207 (prev line) named 'bool CNFC_Device::SendLoraPacket()'
+Found block end at line 212 (previous line) named 'bool CNFC_Device::SendLoraPacket()'
+This is same file? 'True' /n
+Found block start at line 215 (prev line) named 'bool CNFC_Device::GetWorkStat()'
+Found block end at line 217 (previous line) named 'bool CNFC_Device::GetWorkStat()'
+This is same file? 'True' /n
+Found block start at line 220 (prev line) named 'bool CNFC_Device::ParseWorkStat(CByteArray* arr)'
+Found block end at line 227 (previous line) named 'bool CNFC_Device::ParseWorkStat(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 230 (prev line) named 'bool CNFC_Device::ResetWorkStat()'
+Found block end at line 232 (previous line) named 'bool CNFC_Device::ResetWorkStat()'
+This is same file? 'True' /n
+Found block start at line 235 (prev line) named 'bool CNFC_Device::SendCommandMIPEX()'
+
+Total lines processed: 0
+Total brackets found: 12
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 72,
+  "total_size": 23417,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 11 (previous line) named 'bool CNFC_Device::SendCommandMIPEX()'
+This is same file? 'True' /n
+Found block start at line 14 (prev line) named 'CString CNFC_Device::GetMIPEXAnswer(CByteArray* arr)'
+Found block end at line 58 (previous line) named 'CString CNFC_Device::GetMIPEXAnswer(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 61 (prev line) named 'bool CNFC_Device::GetSensorData()'
+Found block end at line 74 (previous line) named 'bool CNFC_Device::GetSensorData()'
+This is same file? 'True' /n
+Found block start at line 77 (prev line) named 'bool CNFC_Device::ParseSensorsData(CByteArray* arr)'
+Found block end at line 96 (previous line) named 'bool CNFC_Device::ParseSensorsData(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 99 (prev line) named 'bool CNFC_Device::StartDeviceDetection()'
+Found block end at line 110 (previous line) named 'bool CNFC_Device::StartDeviceDetection()'
+This is same file? 'True' /n
+Found block start at line 113 (prev line) named 'int CNFC_Device::ReaderSequence1()'
+Found block end at line 134 (previous line) named 'int CNFC_Device::ReaderSequence1()'
+This is same file? 'True' /n
+Found block start at line 137 (prev line) named 'int CNFC_Device::ReaderSequence2()'
+Found block end at line 149 (previous line) named 'int CNFC_Device::ReaderSequence2()'
+This is same file? 'True' /n
+Found block start at line 152 (prev line) named 'int CNFC_Device::ReaderSequence3()'
+Found block end at line 174 (previous line) named 'int CNFC_Device::ReaderSequence3()'
+This is same file? 'True' /n
+Found block start at line 178 (prev line) named 'DWORD WINAPI CNFC_Device::DeviceDetectionThread(void* ptr)'
+Found block end at line 240 (previous line) named 'DWORD WINAPI CNFC_Device::DeviceDetectionThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 245 (prev line) named 'bool CNFC_Device::WaitComplete(bool bAll,bool bIgnoreInputs)'
+
+Total lines processed: 0
+Total brackets found: 9
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 81,
+  "total_size": 28456,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 32 (previous line) named 'bool CNFC_Device::WaitComplete(bool bAll,bool bIgnoreInputs)'
+This is same file? 'True' /n
+Found block start at line 35 (prev line) named 'bool CNFC_Device::BreakExecution()'
+Found block end at line 40 (previous line) named 'bool CNFC_Device::BreakExecution()'
+This is same file? 'True' /n
+Found block start at line 43 (prev line) named 'bool CNFC_Device::WriteLog(CString str, UINT  nStatus)'
+Found block end at line 70 (previous line) named 'bool CNFC_Device::WriteLog(CString str, UINT  nStatus)'
+This is same file? 'True' /n
+Found block start at line 73 (prev line) named 'bool CNFC_Device::Calibrate()'
+Found block end at line 84 (previous line) named 'bool CNFC_Device::Calibrate()'
+This is same file? 'True' /n
+Found block start at line 87 (prev line) named 'bool CNFC_Device::CompareArrays(float* f1, float* f2, int nCount)'
+Found block end at line 97 (previous line) named 'bool CNFC_Device::CompareArrays(float* f1, float* f2, int nCount)'
+This is same file? 'True' /n
+Found block start at line 100 (prev line) named 'DWORD WINAPI CNFC_Device::CalibrationThread(void* ptr)'
+
+Total lines processed: 0
+Total brackets found: 5
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 86,
+  "total_size": 29695,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+
+Total lines processed: 0
+Total brackets found: 0
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 86,
+  "total_size": 29695,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 87 (previous line) named 'DWORD WINAPI CNFC_Device::CalibrationThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 90 (prev line) named 'CString CNFC_Device::GetCommandString(UINT nCommand)'
+
+Total lines processed: 0
+Total brackets found: 1
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 87,
+  "total_size": 29695,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 8 (previous line) named 'CString CNFC_Device::GetCommandString(UINT nCommand)'
+This is same file? 'True' /n
+Found block start at line 11 (prev line) named 'void CNFC_Device::Sleep(UINT nMS)'
+Found block end at line 13 (previous line) named 'void CNFC_Device::Sleep(UINT nMS)'
+This is same file? 'True' /n
+Found block start at line 16 (prev line) named 'bool CNFC_Device::GetLastLogAddr()'
+Found block end at line 18 (previous line) named 'bool CNFC_Device::GetLastLogAddr()'
+This is same file? 'True' /n
+Found block start at line 21 (prev line) named 'bool CNFC_Device::ParseLastLogAddr(CByteArray* arr)'
+Found block end at line 24 (previous line) named 'bool CNFC_Device::ParseLastLogAddr(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 27 (prev line) named 'bool CNFC_Device::SendSwitchBootloader()'
+Found block end at line 40 (previous line) named 'bool CNFC_Device::SendSwitchBootloader()'
+This is same file? 'True' /n
+Found block start at line 43 (prev line) named 'bool CNFC_Device::SendExitBootloader()'
+Found block end at line 56 (previous line) named 'bool CNFC_Device::SendExitBootloader()'
+This is same file? 'True' /n
+Found block start at line 60 (prev line) named 'bool CNFC_Device::ReadOneByte()'
+Found block end at line 73 (previous line) named 'bool CNFC_Device::ReadOneByte()'
+This is same file? 'True' /n
+Found block start at line 76 (prev line) named 'bool CNFC_Device::IsInBootLoader(BYTE& nBootloaderVersion)'
+Found block end at line 82 (previous line) named 'bool CNFC_Device::IsInBootLoader(BYTE& nBootloaderVersion)'
+This is same file? 'True' /n
+Found block start at line 85 (prev line) named 'bool CNFC_Device::SwitchToBootloader(BYTE& nBootloaderVersion,bool bCheckFirst)'
+Found block end at line 119 (previous line) named 'bool CNFC_Device::SwitchToBootloader(BYTE& nBootloaderVersion,bool bCheckFirst)'
+This is same file? 'True' /n
+Found block start at line 122 (prev line) named 'bool CNFC_Device::GetLog()'
+Found block end at line 129 (previous line) named 'bool CNFC_Device::GetLog()'
+This is same file? 'True' /n
+Found block start at line 133 (prev line) named 'DWORD WINAPI CNFC_Device::LogThread(void* ptr)'
+
+Total lines processed: 0
+Total brackets found: 10
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 97,
+  "total_size": 31873,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 77 (previous line) named 'DWORD WINAPI CNFC_Device::LogThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 80 (prev line) named 'bool CNFC_Device::SendBlock0ForBoot(BYTE* buf)'
+Found block end at line 94 (previous line) named 'bool CNFC_Device::SendBlock0ForBoot(BYTE* buf)'
+This is same file? 'True' /n
+Found block start at line 97 (prev line) named 'UINT CNFC_Device::ConvertFromBin(BYTE* bin, int& nFrom, int nCount)'
+Found block end at line 105 (previous line) named 'UINT CNFC_Device::ConvertFromBin(BYTE* bin, int& nFrom, int nCount)'
+This is same file? 'True' /n
+Found block start at line 108 (prev line) named 'void DEVICE_LOG_RECORD::SetFromMSB(double* to, BYTE* from, int nB)'
+Found block end at line 116 (previous line) named 'void DEVICE_LOG_RECORD::SetFromMSB(double* to, BYTE* from, int nB)'
+This is same file? 'True' /n
+Found block start at line 119 (prev line) named 'bool CNFC_Device::IsCorrectDate(UINT nDate)'
+Found block end at line 126 (previous line) named 'bool CNFC_Device::IsCorrectDate(UINT nDate)'
+This is same file? 'True' /n
+Found block start at line 129 (prev line) named 'bool CNFC_Device::ParseLog(CByteArray* arr, UINT nBlock)'
+Found block end at line 254 (previous line) named 'bool CNFC_Device::ParseLog(CByteArray* arr, UINT nBlock)'
+This is same file? 'True' /n
+
+Total lines processed: 0
+Total brackets found: 6
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 103,
+  "total_size": 36083,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block start at line 1 (prev line) named 'bool CNFC_Device::FactoryReset()'
+Found block end at line 8 (previous line) named 'bool CNFC_Device::FactoryReset()'
+This is same file? 'True' /n
+Found block start at line 12 (prev line) named 'DWORD WINAPI CNFC_Device::FactoryResetThread(void* ptr)'
+Found block end at line 79 (previous line) named 'DWORD WINAPI CNFC_Device::FactoryResetThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 82 (prev line) named 'bool CNFC_Device::ResetLog()'
+Found block end at line 84 (previous line) named 'bool CNFC_Device::ResetLog()'
+This is same file? 'True' /n
+Found block start at line 87 (prev line) named 'bool CNFC_Device::StartFirmware()'
+Found block end at line 94 (previous line) named 'bool CNFC_Device::StartFirmware()'
+This is same file? 'True' /n
+Found block start at line 97 (prev line) named 'bool CNFC_Device::ExitBootloader(int nWaitTime)'
+Found block end at line 131 (previous line) named 'bool CNFC_Device::ExitBootloader(int nWaitTime)'
+This is same file? 'True' /n
+Found block start at line 136 (prev line) named 'void CNFC_Device::SendFirmwareStatus(int nBlock, int nTotal)'
+Found block end at line 144 (previous line) named 'void CNFC_Device::SendFirmwareStatus(int nBlock, int nTotal)'
+This is same file? 'True' /n
+Found block start at line 147 (prev line) named 'DWORD WINAPI CNFC_Device::FirmwareThread(void* ptr)'
+
+Total lines processed: 0
+Total brackets found: 6
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 109,
+  "total_size": 39304,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 55 (previous line) named 'DWORD WINAPI CNFC_Device::FirmwareThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 58 (prev line) named 'bool CNFC_Device::SendBeforeStartFirmware(int n)'
+Found block end at line 72 (previous line) named 'bool CNFC_Device::SendBeforeStartFirmware(int n)'
+This is same file? 'True' /n
+Found block start at line 76 (prev line) named 'bool CNFC_Device::WriteC0D0()'
+Found block end at line 89 (previous line) named 'bool CNFC_Device::WriteC0D0()'
+This is same file? 'True' /n
+Found block start at line 93 (prev line) named 'bool CNFC_Device::GetAnswerFlash()'
+Found block end at line 108 (previous line) named 'bool CNFC_Device::GetAnswerFlash()'
+This is same file? 'True' /n
+Found block start at line 112 (prev line) named 'void CNFC_Device::OperationStatusChange(UINT nOperation, UINT nStatus)'
+Found block end at line 124 (previous line) named 'void CNFC_Device::OperationStatusChange(UINT nOperation, UINT nStatus)'
+This is same file? 'True' /n
+Found block start at line 127 (prev line) named 'bool CNFC_Device::ParseData(CNFC_Command* c)'
+Found block end at line 229 (previous line) named 'bool CNFC_Device::ParseData(CNFC_Command* c)'
+This is same file? 'True' /n
+Found block start at line 233 (prev line) named 'bool CNFC_Device::SetSensorUnits(bool bGetSettings)'
+Found block end at line 238 (previous line) named 'bool CNFC_Device::SetSensorUnits(bool bGetSettings)'
+This is same file? 'True' /n
+Found block start at line 242 (prev line) named 'int CNFC_Device::InitThread()'
+Found block end at line 246 (previous line) named 'int CNFC_Device::InitThread()'
+This is same file? 'True' /n
+Found block start at line 249 (prev line) named 'bool CNFC_Device::GetLoraOTAASettings()'
+Found block end at line 252 (previous line) named 'bool CNFC_Device::GetLoraOTAASettings()'
+This is same file? 'True' /n
+Found block start at line 255 (prev line) named 'bool CNFC_Device::SetLoraOTAASettings()'
+
+Total lines processed: 0
+Total brackets found: 9
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 118,
+  "total_size": 42846,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 5 (previous line) named 'bool CNFC_Device::SetLoraOTAASettings()'
+This is same file? 'True' /n
+Found block start at line 8 (prev line) named 'bool CNFC_Device::ParseLoraOTAA(CByteArray* arr)'
+Found block end at line 13 (previous line) named 'bool CNFC_Device::ParseLoraOTAA(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 17 (prev line) named 'bool CNFC_Device::LoraOTAARejoin()'
+Found block end at line 19 (previous line) named 'bool CNFC_Device::LoraOTAARejoin()'
+This is same file? 'True' /n
+Found block start at line 22 (prev line) named 'CString CNFC_Device::GetAlarmString(UINT nGas, SENSORS_DATA& data)'
+Found block end at line 42 (previous line) named 'CString CNFC_Device::GetAlarmString(UINT nGas, SENSORS_DATA& data)'
+This is same file? 'True' /n
+Found block start at line 47 (prev line) named 'CString CNFC_Device::LoadString(UINT nStringId, bool bUnicode)'
+Found block end at line 61 (previous line) named 'CString CNFC_Device::LoadString(UINT nStringId, bool bUnicode)'
+This is same file? 'True' /n
+Found block start at line 66 (prev line) named 'void CNFC_Device::GetAvailableUnits(UINT nGas, RM_DATABASEIDLIST& l, bool bUnicode)'
+Found block end at line 93 (previous line) named 'void CNFC_Device::GetAvailableUnits(UINT nGas, RM_DATABASEIDLIST& l, bool bUnicode)'
+This is same file? 'True' /n
+Found block start at line 96 (prev line) named 'bool CNFC_Device::IsExtendedUnits(UINT nGas)'
+Found block end at line 111 (previous line) named 'bool CNFC_Device::IsExtendedUnits(UINT nGas)'
+This is same file? 'True' /n
+Found block start at line 114 (prev line) named 'UINT CNFC_Device::GetExtendedUnitsMask(UINT nGas)'
+Found block end at line 124 (previous line) named 'UINT CNFC_Device::GetExtendedUnitsMask(UINT nGas)'
+This is same file? 'True' /n
+Found block start at line 127 (prev line) named 'UINT CNFC_Device::GetUnits(UINT nGas)'
+Found block end at line 139 (previous line) named 'UINT CNFC_Device::GetUnits(UINT nGas)'
+This is same file? 'True' /n
+Found block start at line 143 (prev line) named 'CString CNFC_Device::GetUnitsString(UINT nGas, bool bUnicode)'
+Found block end at line 150 (previous line) named 'CString CNFC_Device::GetUnitsString(UINT nGas, bool bUnicode)'
+This is same file? 'True' /n
+Found block start at line 153 (prev line) named 'time_t CNFC_Device::SystemTimeToTime(SYSTEMTIME& st)'
+Found block end at line 164 (previous line) named 'time_t CNFC_Device::SystemTimeToTime(SYSTEMTIME& st)'
+This is same file? 'True' /n
+Found block start at line 167 (prev line) named 'void CNFC_Device::TimeToSystemTIME(UINT nTime, SYSTEMTIME& st)'
+Found block end at line 179 (previous line) named 'void CNFC_Device::TimeToSystemTIME(UINT nTime, SYSTEMTIME& st)'
+This is same file? 'True' /n
+Found block start at line 182 (prev line) named 'bool CNFC_Device::IsMIPEX_FAnswerCorrect(CString str)'
+Found block end at line 193 (previous line) named 'bool CNFC_Device::IsMIPEX_FAnswerCorrect(CString str)'
+This is same file? 'True' /n
+Found block start at line 196 (prev line) named 'bool CNFC_Device::IsBigMIPEXReply(CString strCommand)'
+Found block end at line 202 (previous line) named 'bool CNFC_Device::IsBigMIPEXReply(CString strCommand)'
+This is same file? 'True' /n
+Found block start at line 205 (prev line) named 'int CNFC_Device::GetMIPEXCommandBlocksNum()'
+Found block end at line 210 (previous line) named 'int CNFC_Device::GetMIPEXCommandBlocksNum()'
+This is same file? 'True' /n
+Found block start at line 213 (prev line) named 'UINT CNFC_Device::GetMIPEXCommandTimeout()'
+Found block end at line 217 (previous line) named 'UINT CNFC_Device::GetMIPEXCommandTimeout()'
+This is same file? 'True' /n
+Found block start at line 220 (prev line) named 'bool CNFC_Device::IsHasLora()'
+Found block end at line 225 (previous line) named 'bool CNFC_Device::IsHasLora()'
+This is same file? 'True' /n
+Found block start at line 229 (prev line) named 'bool CNFC_Device::SetSensorUnitsAll()'
+Found block end at line 236 (previous line) named 'bool CNFC_Device::SetSensorUnitsAll()'
+This is same file? 'True' /n
+Found block start at line 239 (prev line) named 'DWORD WINAPI CNFC_Device::SetSensorUnitsThread(void* ptr)'
+
+Total lines processed: 0
+Total brackets found: 18
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 136,
+  "total_size": 47552,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 13 (previous line) named 'DWORD WINAPI CNFC_Device::SetSensorUnitsThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 16 (prev line) named 'void CNFC_Device::GetAvailableGas(UINT nGas, RM_DATABASEIDLIST& l, bool bShort, bool bUnicode)'
+Found block end at line 110 (previous line) named 'void CNFC_Device::GetAvailableGas(UINT nGas, RM_DATABASEIDLIST& l, bool bShort, bool bUnicode)'
+This is same file? 'True' /n
+Found block start at line 113 (prev line) named 'CString CNFC_Device::GetGasStringByVal(UINT nGas, UINT nVal, bool bShort, bool bUnicode)'
+Found block end at line 124 (previous line) named 'CString CNFC_Device::GetGasStringByVal(UINT nGas, UINT nVal, bool bShort, bool bUnicode)'
+This is same file? 'True' /n
+Found block start at line 127 (prev line) named 'CString CNFC_Device::GetGasString(UINT nGas, bool bShort, bool bUnicode)'
+Found block end at line 139 (previous line) named 'CString CNFC_Device::GetGasString(UINT nGas, bool bShort, bool bUnicode)'
+This is same file? 'True' /n
+Found block start at line 142 (prev line) named 'BYTE CNFC_Device::GetSelectedGas(UINT nGas)'
+Found block end at line 152 (previous line) named 'BYTE CNFC_Device::GetSelectedGas(UINT nGas)'
+This is same file? 'True' /n
+Found block start at line 156 (prev line) named 'bool CNFC_Device::TestLimit(UINT nGas, bool bLimit2)'
+Found block end at line 165 (previous line) named 'bool CNFC_Device::TestLimit(UINT nGas, bool bLimit2)'
+This is same file? 'True' /n
+Found block start at line 168 (prev line) named 'DWORD WINAPI CNFC_Device::TestLimitThread(void* ptr)'
+Found block end at line 240 (previous line) named 'DWORD WINAPI CNFC_Device::TestLimitThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 243 (prev line) named 'bool CNFC_Device::TestIfDeviceChanged()'
+Found block end at line 254 (previous line) named 'bool CNFC_Device::TestIfDeviceChanged()'
+This is same file? 'True' /n
+
+Total lines processed: 0
+Total brackets found: 8
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 144,
+  "total_size": 55551,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block start at line 1 (prev line) named 'void CNFC_Device::ClearLoadState()'
+Found block end at line 9 (previous line) named 'void CNFC_Device::ClearLoadState()'
+This is same file? 'True' /n
+Found block start at line 13 (prev line) named 'bool CNFC_Device::UpdateSensorsData(bool bSendF, CString strFCommand)'
+Found block end at line 22 (previous line) named 'bool CNFC_Device::UpdateSensorsData(bool bSendF, CString strFCommand)'
+This is same file? 'True' /n
+Found block start at line 26 (prev line) named 'bool CNFC_Device::StartMonitoring(bool bSendF, CString strFCommand)'
+Found block end at line 35 (previous line) named 'bool CNFC_Device::StartMonitoring(bool bSendF, CString strFCommand)'
+This is same file? 'True' /n
+Found block start at line 38 (prev line) named 'DWORD WINAPI CNFC_Device::StartMonitoringThread(void* ptr)'
+Found block end at line 55 (previous line) named 'DWORD WINAPI CNFC_Device::StartMonitoringThread(void* ptr)'
+This is same file? 'True' /n
+Found block start at line 58 (prev line) named 'bool CNFC_Device::IsHaveProperty(device_property nProperty, UINT nSWVer)'
+Found block end at line 126 (previous line) named 'bool CNFC_Device::IsHaveProperty(device_property nProperty, UINT nSWVer)'
+This is same file? 'True' /n
+Found block start at line 129 (prev line) named 'bool CNFC_Device::IsHaveProperty(device_property nProperty)'
+Found block end at line 134 (previous line) named 'bool CNFC_Device::IsHaveProperty(device_property nProperty)'
+This is same file? 'True' /n
+Found block start at line 137 (prev line) named 'bool DEVICE_SAVED_SETTINGS::Save(CFile* f)'
+Found block end at line 167 (previous line) named 'bool DEVICE_SAVED_SETTINGS::Save(CFile* f)'
+This is same file? 'True' /n
+Found block start at line 170 (prev line) named 'bool DEVICE_SAVED_SETTINGS::Load(CFile* f)'
+Found block end at line 220 (previous line) named 'bool DEVICE_SAVED_SETTINGS::Load(CFile* f)'
+This is same file? 'True' /n
+Found block start at line 223 (prev line) named 'CString DEVICE_SAVED_SETTINGS::GetDescr()'
+Found block end at line 227 (previous line) named 'CString DEVICE_SAVED_SETTINGS::GetDescr()'
+This is same file? 'True' /n
+Found block start at line 230 (prev line) named 'bool CNFC_Device::GetLoraInfo()'
+Found block end at line 232 (previous line) named 'bool CNFC_Device::GetLoraInfo()'
+This is same file? 'True' /n
+Found block start at line 235 (prev line) named 'bool CNFC_Device::ParseLoraInfo(CByteArray* arr)'
+Found block end at line 239 (previous line) named 'bool CNFC_Device::ParseLoraInfo(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 242 (prev line) named 'float CNFC_Device::GetGasDevider(UINT nGas, bool bForScalePoints)'
+
+Total lines processed: 0
+Total brackets found: 11
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 155,
+  "total_size": 60581,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block end at line 5 (previous line) named 'float CNFC_Device::GetGasDevider(UINT nGas, bool bForScalePoints)'
+This is same file? 'True' /n
+Found block start at line 8 (prev line) named 'bool CNFC_Device::IsGasSelected(UINT nGas)'
+Found block end at line 15 (previous line) named 'bool CNFC_Device::IsGasSelected(UINT nGas)'
+This is same file? 'True' /n
+Found block start at line 18 (prev line) named 'void CNFC_Device::ExchangeSuccess(bool bSuccess)'
+Found block end at line 24 (previous line) named 'void CNFC_Device::ExchangeSuccess(bool bSuccess)'
+This is same file? 'True' /n
+Found block start at line 27 (prev line) named 'bool CNFC_Device::GetInterfaces()'
+Found block end at line 30 (previous line) named 'bool CNFC_Device::GetInterfaces()'
+This is same file? 'True' /n
+Found block start at line 33 (prev line) named 'bool CNFC_Device::SetInterfaces()'
+Found block end at line 39 (previous line) named 'bool CNFC_Device::SetInterfaces()'
+This is same file? 'True' /n
+Found block start at line 42 (prev line) named 'bool CNFC_Device::GetWifiSettings()'
+Found block end at line 45 (previous line) named 'bool CNFC_Device::GetWifiSettings()'
+This is same file? 'True' /n
+Found block start at line 48 (prev line) named 'UINT WIFI_SETTINGS::GetSize(UINT nSWVer)'
+Found block end at line 52 (previous line) named 'UINT WIFI_SETTINGS::GetSize(UINT nSWVer)'
+This is same file? 'True' /n
+Found block start at line 55 (prev line) named 'bool CNFC_Device::SetWifiSettings()'
+Found block end at line 61 (previous line) named 'bool CNFC_Device::SetWifiSettings()'
+This is same file? 'True' /n
+Found block start at line 64 (prev line) named 'bool CNFC_Device::ParseInterfaces(CByteArray* arr)'
+Found block end at line 70 (previous line) named 'bool CNFC_Device::ParseInterfaces(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 73 (prev line) named 'bool CNFC_Device::ParseWifiSettings(CByteArray* arr)'
+Found block end at line 78 (previous line) named 'bool CNFC_Device::ParseWifiSettings(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 81 (prev line) named 'bool CNFC_Device::ParseCH4Poly(CByteArray* arr)'
+Found block end at line 87 (previous line) named 'bool CNFC_Device::ParseCH4Poly(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 90 (prev line) named 'void CNFC_Device::CopyUnits(CNFC_Device* from)'
+Found block end at line 105 (previous line) named 'void CNFC_Device::CopyUnits(CNFC_Device* from)'
+This is same file? 'True' /n
+Found block start at line 108 (prev line) named 'int CNFC_Device::GetPrecision(UINT nGas)'
+Found block end at line 116 (previous line) named 'int CNFC_Device::GetPrecision(UINT nGas)'
+This is same file? 'True' /n
+Found block start at line 119 (prev line) named 'bool CNFC_Device::MipexBackup()'
+Found block end at line 122 (previous line) named 'bool CNFC_Device::MipexBackup()'
+This is same file? 'True' /n
+Found block start at line 125 (prev line) named 'bool CNFC_Device::MipexRestore()'
+Found block end at line 127 (previous line) named 'bool CNFC_Device::MipexRestore()'
+This is same file? 'True' /n
+Found block start at line 130 (prev line) named 'bool CNFC_Device::MipexGetBackup()'
+Found block end at line 132 (previous line) named 'bool CNFC_Device::MipexGetBackup()'
+This is same file? 'True' /n
+Found block start at line 135 (prev line) named 'bool CNFC_Device::MipexSetBackup(MIPEX_COEFF* coeff)'
+Found block end at line 141 (previous line) named 'bool CNFC_Device::MipexSetBackup(MIPEX_COEFF* coeff)'
+This is same file? 'True' /n
+Found block start at line 144 (prev line) named 'bool CNFC_Device::ParseMipexCoeff(CByteArray* arr)'
+Found block end at line 149 (previous line) named 'bool CNFC_Device::ParseMipexCoeff(CByteArray* arr)'
+This is same file? 'True' /n
+Found block start at line 152 (prev line) named 'bool CNFC_Device::IsPDK()'
+Found block end at line 154 (previous line) named 'bool CNFC_Device::IsPDK()'
+This is same file? 'True' /n
+Found block start at line 157 (prev line) named 'double CNFC_Device::RecalcForCalibration(UINT nGas, double d)'
+Found block end at line 207 (previous line) named 'double CNFC_Device::RecalcForCalibration(UINT nGas, double d)'
+This is same file? 'True' /n
+Found block start at line 210 (prev line) named 'bool CNFC_Device::UpdateMIPEXCommand(CString& m_Command)'
+Found block end at line 254 (previous line) named 'bool CNFC_Device::UpdateMIPEXCommand(CString& m_Command)'
+This is same file? 'True' /n
+
+Total lines processed: 0
+Total brackets found: 21
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 176,
+  "total_size": 65359,
+  "is_valid": false
+}
+
+=== File: NFC_Device.cpp (2025-03-24 00:55:45) ===
+Found block start at line 1 (prev line) named 'void DELAYED_COMMAND_ARRAY::RecalcTime()'
+Found block end at line 8 (previous line) named 'void DELAYED_COMMAND_ARRAY::RecalcTime()'
+This is same file? 'True' /n
+Found block start at line 11 (prev line) named 'CString DELAYED_COMMAND_ARRAY::GetProfileFolder()'
+Found block end at line 13 (previous line) named 'CString DELAYED_COMMAND_ARRAY::GetProfileFolder()'
+This is same file? 'True' /n
+Found block start at line 16 (prev line) named 'bool DELAYED_COMMAND_ARRAY::Save()'
+Found block end at line 42 (previous line) named 'bool DELAYED_COMMAND_ARRAY::Save()'
+This is same file? 'True' /n
+Found block start at line 45 (prev line) named 'bool DELAYED_COMMAND_ARRAY::Load()'
+Found block end at line 82 (previous line) named 'bool DELAYED_COMMAND_ARRAY::Load()'
+This is same file? 'True' /n
+Found block start at line 85 (prev line) named 'bool CNFC_Device::MipexGetLastCommand()'
+Found block end at line 87 (previous line) named 'bool CNFC_Device::MipexGetLastCommand()'
+This is same file? 'True' /n
+Found block start at line 90 (prev line) named 'bool CNFC_Device::ParseLastMIPEXCommand(CByteArray* arr, DELAYED_COMMAND_RESULT& r)'
+Found block end at line 99 (previous line) named 'bool CNFC_Device::ParseLastMIPEXCommand(CByteArray* arr, DELAYED_COMMAND_RESULT& r)'
+This is same file? 'True' /n
+Found block start at line 102 (prev line) named 'CString CNFC_Device::GetSerialNumber()'
+Found block end at line 104 (previous line) named 'CString CNFC_Device::GetSerialNumber()'
+This is same file? 'True' /n
+Found block start at line 107 (prev line) named 'CString DEVICE_LOG_RECORD::GetFreezeStatus()'
+Found block end at line 114 (previous line) named 'CString DEVICE_LOG_RECORD::GetFreezeStatus()'
+This is same file? 'True' /n
+
+Total lines processed: 0
+Total brackets found: 8
+{
+  "meta": {
+    "file": "NFC_Device.cpp",
+    "part": "1/10",
+    "created": "2025-03-24T00:55:44.959161",
+    "size_limit": 256
+  },
+  "functions_count": 184,
+  "total_size": 68026,
+  "is_valid": false
+}
+
+=== File: SampleSIle.cpp (2025-03-24 00:55:47) ===
+Found block start at line 1 (prev line) named 'CString MyClass::GetSMyParametr()'
+Found block end at line 3 (previous line) named 'CString MyClass::GetSMyParametr()'
+This is same file? 'False' /n
+Found block start at line 6 (prev line) named 'CString MyClass::GetSMySecondParametr()'
+Found block end at line 8 (previous line) named 'CString MyClass::GetSMySecondParametr()'
+This is same file? 'False' /n
+
+Total lines processed: 0
+Total brackets found: 2
+{
+  "meta": {
+    "file": "SampleSIle.cpp",
+    "part": "19/10",
+    "created": "2025-03-24T00:55:47.675204",
+    "size_limit": 256
+  },
+  "functions_count": 2,
+  "total_size": 38,
+  "is_valid": true
+}

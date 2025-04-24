@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{C4996D25-3E96-46D5-BA70-66D04801659B}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>VegaConnect</RootNamespace>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+    <ProjectName>LongGas</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Projects\GenDBGit\CommonLibs\MyIncludes;C:\Projects\GenDBGit\CommonLibs\ALXGrid\INCLUDE;C:\Projects\GenDBGit\CommonLibs;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Projects\GenDBGit\CommonLibs\MyLibsOutput;C:\Projects\GenDBGit\CommonLibs\boost\stage\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>LongGas</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Projects\GenDBGit\CommonLibs\MyIncludes;C:\Projects\GenDBGit\CommonLibs\ALXGrid\INCLUDE;C:\Projects\GenDBGit\CommonLibs;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Projects\GenDBGit\CommonLibs\MyLibsOutput;C:\Projects\GenDBGit\CommonLibs\boost\stage\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>LongGas</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>alxgridd.lib;miscstuffd.lib;libmysqlD.lib;graphlibd.lib;MyCtrlsLibD.lib;cximaged.lib;Jpeg2017.lib;setupapi.lib;Version.lib;mpr.lib;zlibd.lib;protocolsd.lib;winmm.lib;PSILibd.lib;mysqld.lib;InstrumentsD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcirtd.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalManifestDependencies>
+      </AdditionalManifestDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <DelayLoadDLLs>libmysql.dll</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>alxgridR.lib;miscstuffR.lib;libmysql.lib;graphlibR.lib;MyCtrlsLibR.lib;cximager.lib;Jpeg2017.lib;setupapi.lib;Version.lib;mpr.lib;zlib.lib;protocolsr.lib;winmm.lib;PSILibr.lib;mysqlr.lib;Instrumentsr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcirt.lib</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <DelayLoadDLLs>libmysql.dll</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>upx.exe -7 --compress-icons=2 "$(OutDir)$(TargetName)$(TargetExt)"
+copy $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)Exe\\$(TargetName)$(TargetExt)</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy exe</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CCameraSettingsDlg.h" />
+    <ClInclude Include="CGraphDlg.h" />
+    <ClInclude Include="CGridInfoDlg.h" />
+    <ClInclude Include="CLGDelayedCommandDlg.h" />
+    <ClInclude Include="CLGMultipleDlg.h" />
+    <ClInclude Include="CLGSaveDlg.h" />
+    <ClInclude Include="CLGWifiDlg.h" />
+    <ClInclude Include="CLongGasMainDlg.h" />
+    <ClInclude Include="CRichEditChildDlg.h" />
+    <ClInclude Include="Definitions.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="GridCtrl.h" />
+    <ClInclude Include="GroupInfoDlg.h" />
+    <ClInclude Include="HidApi.h" />
+    <ClInclude Include="LGAlarmsDlg.h" />
+    <ClInclude Include="LGFirmwareDlg.h" />
+    <ClInclude Include="LGGraphDlg.h" />
+    <ClInclude Include="LGLogDlg.h" />
+    <ClInclude Include="LGMainDlg.h" />
+    <ClInclude Include="LGMipexDlg.h" />
+    <ClInclude Include="LGRadioDlg.h" />
+    <ClInclude Include="LGSensorsDlg.h" />
+    <ClInclude Include="LGSettingsDlg.h" />
+    <ClInclude Include="LGWorkStatDlg.h" />
+    <ClInclude Include="NFC_Device.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="RCTranslateDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SetHotkeyDlg.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="LongGas.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CCameraSettingsDlg.cpp" />
+    <ClCompile Include="CGraphDlg.cpp" />
+    <ClCompile Include="CGridInfoDlg.cpp" />
+    <ClCompile Include="CLGDelayedCommandDlg.cpp" />
+    <ClCompile Include="CLGMultipleDlg.cpp" />
+    <ClCompile Include="CLGSaveDlg.cpp" />
+    <ClCompile Include="CLGWifiDlg.cpp" />
+    <ClCompile Include="CLongGasMainDlg.cpp" />
+    <ClCompile Include="CRichEditChildDlg.cpp" />
+    <ClCompile Include="GridCtrl.cpp" />
+    <ClCompile Include="GroupInfoDlg.cpp" />
+    <ClCompile Include="HidApi.cpp" />
+    <ClCompile Include="LGAlarmsDlg.cpp" />
+    <ClCompile Include="LGFirmwareDlg.cpp" />
+    <ClCompile Include="LGGraphDlg.cpp" />
+    <ClCompile Include="LGLogDlg.cpp" />
+    <ClCompile Include="LGMainDlg.cpp" />
+    <ClCompile Include="LGMipexDlg.cpp" />
+    <ClCompile Include="LGRadioDlg.cpp" />
+    <ClCompile Include="LGSensorsDlg.cpp" />
+    <ClCompile Include="LGSettingsDlg.cpp" />
+    <ClCompile Include="LGWorkStatDlg.cpp" />
+    <ClCompile Include="NFC_Device.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RCTranslateDlg.cpp" />
+    <ClCompile Include="LongGas.cpp" />
+    <ClCompile Include="SetHotkeyDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VegaConnect.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\igmdb\res\rt_manif.bin" />
+    <None Include="default1.bin" />
+    <None Include="res\VegaConnect.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\IGMDB\res\ark2.ico" />
+    <Image Include="res\close-button.bmp" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\VegaConnect.ico" />
+    <Image Include="res\МУЛЬТИГАЗСЕНС-М2_(оранж).ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
