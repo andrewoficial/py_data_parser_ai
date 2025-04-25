@@ -1,0 +1,21 @@
+# .env file (содержит секреты)
+.env
+
+# Output / temp directories
+dir_input/
+dir_output/
+dir_temp/
+dir_logs/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# VSCode / PyCharm settings (если используешь)
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
