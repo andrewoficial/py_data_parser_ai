@@ -14,6 +14,7 @@ class SystemState:
     def set_state(self, new_state):
         allowed_transitions = {
             "uninitialized": ["ready"],
+            "configured": ["ready"],
             "ready": ["processing", "ready"],
             "processing": ["ready"]
         }
