@@ -67,8 +67,8 @@ class ValidateJsonCommand(BaseCommand):
             ]
 
     def _check_preconditions(self):
-        return self.state.state == "configured"    #Пытаюсь отслеживать поток команд.... Как то выглядит нелепо...
-        
+        return self.state.state == "configured"   
+
     @property
     def name(self) -> str:
         return "json_validate"
@@ -76,23 +76,6 @@ class ValidateJsonCommand(BaseCommand):
     @property
     def description(self) -> str:
         return "Validate JSON files structure and syntax"
-
-    def setup_parser(self, parser):
-        parser.add_argument(
-            '--all',
-            action='store_true',
-            help='Clear all output directories'
-        )
-        parser.add_argument(
-            '-d', '--dirs',
-            nargs='+',
-            help='List of directories to clear (default: dir_output in project root)'
-        )
-        parser.add_argument(
-            '--dry-run',
-            action='store_true',
-            help='Simulate cleaning without actual deletion'
-        )
 
     def _setup_logger(self):
         self.logs_dir = self.path_config.logs_dir
@@ -106,6 +89,14 @@ class ValidateJsonCommand(BaseCommand):
         )
         self.logger = logging.getLogger('json_validator')
 
+    def setup_parser(self, parser):
+        parser.add_argument(
+            '--dry-run',
+            action='store_true',
+            help='Simulate sorting without actual file moving'
+        )
+
+
 
 
     def execute(self, args):
@@ -116,8 +107,7 @@ class ValidateJsonCommand(BaseCommand):
 
         ok_dir.mkdir(exist_ok=True, parents=True)
         err_dir.mkdir(exist_ok=True, parents=True)
-        errors = []
-        has_errors = False
+
         stats = {'total': 0, 'valid': 0, 'invalid': 0}
         
         for json_file in json_dir.glob('**/*.json'):
@@ -139,13 +129,14 @@ class ValidateJsonCommand(BaseCommand):
         print(f"Log file: {self.logs_dir / 'validation.log'}")
 
     def _validate_file(self, file_path: Path) -> Tuple[bool, List[ValidationError]]:
+        errors = []  # Инициализируем список ошибок
+        has_errors = False
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 json_str = f.read()
                 self.validator.build_line_map(json_str)
+                data = json.loads(json_str)  # Убрали дублирование
 
-            data = json.loads(json_str)
-            data = json.loads(json_str)
             items_positions = []
             decoder = json.JSONDecoder()
             pos = 0
@@ -154,8 +145,11 @@ class ValidateJsonCommand(BaseCommand):
                 if json_str[pos] in ' \t\n\r':
                     pos += 1
                 else:
-                    obj, pos = decoder.raw_decode(json_str, pos)
-                    items_positions.append(pos)
+                    try:
+                        obj, pos = decoder.raw_decode(json_str, pos)
+                        items_positions.append(pos)
+                    except json.JSONDecodeError:
+                        break  # Прерываем цикл при ошибке декодирования
 
             for idx, (item, end_pos) in enumerate(zip(data, items_positions), 1):
                 line_num = self.validator.get_line_number(end_pos)
@@ -177,7 +171,13 @@ class ValidateJsonCommand(BaseCommand):
                     required = rule.get('required', False)
                     
                     if required and field not in item:
-                        errors.append(make_error(f"Отсутствует обязательное поле '{field}'", ErrorLevel.ERROR))
+                        errors.append(self._make_error(
+                            f"Отсутствует обязательное поле '{field}'", 
+                            ErrorLevel.ERROR,
+                            file_path=file_path,
+                            element=idx,
+                            line=line_num
+                        ))
                         has_errors = True
                         continue
                     
@@ -186,33 +186,36 @@ class ValidateJsonCommand(BaseCommand):
                         
                         # Обработка null-значений
                         if value is None:
-                            handle_null_value(field, rule, item, errors, idx, line_num, file_path)
+                            self._handle_null_value(field, rule, item, errors, idx, line_num, file_path)
                             value = item[field]
                         
                         # Проверка типа
                         if not isinstance(value, rule['type']):
-                            errors.append(make_error(
+                            errors.append(self._make_error(
                                 f"Поле '{field}' должно быть {rule['type'].__name__}",
-                                ErrorLevel.ERROR
+                                ErrorLevel.ERROR,
+                                file_path=file_path,
+                                element=idx,
+                                line=line_num
                             ))
                             has_errors = True
                             continue
                         
-                        # Специфические проверки для разных типов
+                        # Специфические проверки
                         if isinstance(value, str):
                             check_string_rules(field, value, rule, errors, line_num, file_path, idx)
-                        
                         elif isinstance(value, list):
                             check_list_rules(field, value, rule, errors, line_num, file_path, idx, item)
-                            has_errors = check_nested_rules(field, value, rule, errors, line_num, file_path, idx)
+                            has_errors |= check_nested_rules(field, value, rule, errors, line_num, file_path, idx)
 
             # Логирование ошибок
             for error in errors:
-                logger.error(f"{error.file} | Line: {error.line} | Element: {error.element} | {error.message}")
-                return len(errors) == 0, errors
+                self.logger.error(  # Исправлено на self.logger
+                    f"{error.file} | Line: {error.line} | "
+                    f"Element: {error.element} | {error.message}"
+                )
 
             return not has_errors, errors
-
         except json.JSONDecodeError as e:
             line = self.validator.get_line_number(e.pos)
             error = ValidationError(
