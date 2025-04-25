@@ -1,14 +1,19 @@
 # commands/cmd_help.py
+# Урода, лопающая красивы паттерн команда. Нужно создать абстрактный класс команда и упаковывать аргументы
 from commands.base import BaseCommand
 from pathlib import Path
+from typing import Dict, Type
+import argparse
+from commands.registry import CommandRegistry
 
 class HelpCommand(BaseCommand):
-    def __init__(self, project_root: Path):
+    def __init__(self, project_root: Path, registry: CommandRegistry):
         self.project_root = project_root
+        self.registry = registry  # Получаем доступ к реестру команд
 
     @property
     def name(self) -> str:
-        return "help"
+        return "show_help"
     
     @property
     def description(self) -> str:
@@ -16,48 +21,54 @@ class HelpCommand(BaseCommand):
 
     def setup_parser(self, parser):
         parser.add_argument(
-            'command',
-            nargs='?',
-            help='Command to show help for'
+            "command", 
+            nargs="?", 
+            help="Specific command to show help for"
         )
 
     def execute(self, args):
-        from interfaces.cli import CLI  # Импорт здесь чтобы избежать циклических зависимостей
-        cli = CLI()
-        print("Инициализация...")
-        self.state.set_state("ready") 
+        if not self.registry:
+            print("Error: Registry not initialized")
+            return
+            
+        commands = self.registry.instantiate_commands()  # Получаем экземпляры команд
+        
         if args.command:
-            # Показываем help для конкретной команды
-            self._show_command_help(args.command, cli)
+            self._show_command_help(args.command, commands)
         else:
-            # Общий help
-            cli._print_help()
+            self._show_general_help(commands)
 
-    def _show_command_help(self, command_name: str, cli):
-        if command_name in cli.commands:
-            print(f"\nHelp for command '{command_name}':")
-            print(f"  Description: {cli.commands[command_name].description}")
-            
-            # Создаем временный парсер для вывода help конкретной команды
-            import io
-            from contextlib import redirect_stdout
-            
-            buffer = io.StringIO()
-            with redirect_stdout(buffer):
-                temp_parser = argparse.ArgumentParser(
-                    prog=f"main.py {command_name}",
-                    description=cli.commands[command_name].description,
-                    formatter_class=argparse.RawTextHelpFormatter
-                )
-                cli.commands[command_name].setup_parser(temp_parser)
-                temp_parser.print_help()
-            
-            print(buffer.getvalue())
-        else:
+    def _show_general_help(self, commands: Dict[str, BaseCommand]):
+        print("Available commands:\n")
+        for name, cmd in commands.items():
+            print(f"  {name:<15} {cmd.description}")
+        print("\nUse 'show_help <command>' for detailed help")
+
+    def _show_command_help(self, command_name: str, commands: Dict[str, BaseCommand]):
+        if command_name not in commands:
             print(f"Unknown command: {command_name}")
-            print("Available commands:")
-            for name in cli.commands:
-                print(f"  {name}")
+            return
+
+        command = commands[command_name]
+        print(f"\nHelp for command '{command_name}':")
+        print(f"Description: {command.description}\n")
+
+        # Используем argparse для вывода help команды
+        import io
+        from contextlib import redirect_stdout
+        
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            # Создаем временный парсер
+            parser = argparse.ArgumentParser(
+                prog=f"main.py {command_name}",
+                formatter_class=argparse.RawTextHelpFormatter,
+                add_help=False
+            )
+            command.setup_parser(parser)
+            parser.print_help()
+        
+        print(buffer.getvalue())
 
     def _check_preconditions(self):
-        return self.state.state == "uninitialized"                    
+        return self.state.state == "uninitialized"  

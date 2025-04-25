@@ -21,7 +21,9 @@ class InitialCommand(BaseCommand):
         self.cache_path = self.project_root / "dir_temp/file_hashes/file_hashes.json" # Хранение файл
         self.logs_dir = self.project_root / "dir_logs" # Хранение хешей
         self.vector_store_dir = self.project_root / "dir_output/summarization" # Хранение обощений  
-        self.unsort_dir = self.sources_dir / "dir_temp/inp_unsort" # Не были сортированы      
+        self.unsort_dir = self.project_root / "dir_temp/inp_unsort" # Не были сортированы      
+        self.json_syntax_ok = self.project_root / "dir_temp/inp_json_syntax_ok" # Json после успешной проверки синтаксиса
+        self.json_syntax_err = self.project_root / "dir_temp/inp_json_syntax_err" # Json после провала проверки синтаксиса
         self.state = SystemState()
 
     @property
@@ -56,6 +58,8 @@ class InitialCommand(BaseCommand):
             self.cache_dir,
             self.logs_dir,
             self.unsort_dir,
+            self.json_syntax_err,
+            self.json_syntax_ok,
             self.vector_store_dir
         ]
 
@@ -116,6 +120,8 @@ class PathConfig(BaseSettings):
         self.logs_dir = self.base_dir / "dir_logs" # Хранение хешей
         self.vector_store_dir = self.base_dir / "dir_output/summarization" # Хранение обощений
         self.ignore_dirs = self.base_dir / "dir_input/tmp" # Хранение обощений
+        self.json_syntax_ok = self.base_dir / "dir_temp/inp_json_syntax_ok" # Json после успешной проверки синтаксиса
+        self.json_syntax_err = self.base_dir / "dir_temp/inp_json_syntax_err" # Json после провала проверки синтаксиса
 
 
 class VectorConfig(BaseSettings):

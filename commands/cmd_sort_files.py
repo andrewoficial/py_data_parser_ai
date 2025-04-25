@@ -14,8 +14,8 @@ class SortFilesCommand(BaseCommand):
         # Инициализируем целевые директории
         self.base_dir = self.path_config.base_dir
         self.cpp_dir = self.path_config.cpp_dir
-        print(self.base_dir)
-        print(self.cpp_dir)
+        #print(self.base_dir)
+        #print(self.cpp_dir)
         self.json_dir = self.path_config.json_dir
         self.qaa_dir = self.path_config.qaa_dir
         
@@ -113,6 +113,6 @@ class SortFilesCommand(BaseCommand):
         
         if not dry_run:
             shutil.copy2(src, dest)  # copy2 сохраняет метаинформацию (время создания и т.д.)
-            
+
     def _check_preconditions(self):
         return self.state.state == "configured"    #Пытаюсь отслеживать поток команд.... Как то выглядит нелепо...

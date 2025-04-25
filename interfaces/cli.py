@@ -5,12 +5,21 @@ from commands.registry import CommandRegistry
 
 class CLI:
     def __init__(self, interactive_mode=False):
-        self.project_root = Path(__file__).parent.parent
-        self.registry = CommandRegistry(self.project_root)
-        self.commands = self.registry.instantiate_commands()
-        self.parser = self._create_root_parser()
+
         self.interactive_mode = interactive_mode
 
+        self.project_root = Path(__file__).parent.parent
+        self.registry = CommandRegistry(self.project_root)
+        self.commands = self._init_commands()
+        self.parser = self._create_root_parser()
+
+    def _init_commands(self):
+        commands = self.registry.instantiate_commands()
+        # Инжектим реестр в команду help
+        if "show_help" in commands:
+            commands["show_help"].registry = self.registry
+        return commands
+        
     def _create_root_parser(self):
         parser = argparse.ArgumentParser(
             description="Project CLI Tool",
@@ -41,6 +50,7 @@ class CLI:
             return  # Пропускаем в интерактивном режиме
 
         if not args.command:
+            print("not args.command")
             self._print_help()
             return            
         
@@ -52,6 +62,4 @@ class CLI:
 
     def _print_help(self):
         self.parser.print_help()
-        print("\nAvailable commands (help answer):")
-        for name, cmd in self.commands.items():
-            print(f"  {name:<10} {cmd.description}")
+        

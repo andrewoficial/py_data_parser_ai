@@ -25,7 +25,10 @@ class PathConfig(BaseSettings):
         self.json_dir = self.base_dir / "dir_temp/inp_json" # Найденные json
         self.cpp_dir = self.base_dir / "dir_temp/inp_cpp" # Найденные cpp
         self.qaa_dir = self.base_dir / "dir_temp/inp_q_and_a" # Найденные q  and a файлы
+        self.json_syntax_ok = self.base_dir / "dir_temp/inp_json_syntax_ok" # Найденные json после разделения
+        self.json_syntax_err = self.base_dir / "dir_temp/inp_json_syntax_err" # Найденные json после разделения
         self.json_split_dir = self.base_dir / "dir_temp/inp_json_split" # Найденные json после разделения
+
         self.cache_dir = self.base_dir / "dir_temp/file_hashes" # Хранение хешей
         self.cache_path = self.base_dir / "dir_temp/file_hashes/file_hashes.json" # Хранение файл
         self.unsort_dir = self.base_dir / "dir_temp/inp_unsort" # Не были сортированы
