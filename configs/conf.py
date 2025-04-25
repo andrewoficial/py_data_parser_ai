@@ -20,15 +20,15 @@ class PathConfig(BaseSettings):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
+        self.base_dir = Path(__file__).resolve().parent.parent
         self.sources_dir = self.base_dir / "dir_input" # Файлы для анализа
-        self.json_dir = self.sources_dir / "dir_temp/inp_json" # Найденные json
-        self.cpp_dir = self.sources_dir / "dir_temp/inp_cpp" # Найденные cpp
-        self.qaa_dir = self.sources_dir / "dir_temp/inp_q_and_a" # Найденные q  and a файлы
-        self.json_split_dir = self.sources_dir / "dir_temp/inp_json_split" # Найденные json после разделения
+        self.json_dir = self.base_dir / "dir_temp/inp_json" # Найденные json
+        self.cpp_dir = self.base_dir / "dir_temp/inp_cpp" # Найденные cpp
+        self.qaa_dir = self.base_dir / "dir_temp/inp_q_and_a" # Найденные q  and a файлы
+        self.json_split_dir = self.base_dir / "dir_temp/inp_json_split" # Найденные json после разделения
         self.cache_dir = self.base_dir / "dir_temp/file_hashes" # Хранение хешей
         self.cache_path = self.base_dir / "dir_temp/file_hashes/file_hashes.json" # Хранение файл
-        self.unsort_dir = self.sources_dir / "dir_temp/inp_unsort" # Не были сортированы
+        self.unsort_dir = self.base_dir / "dir_temp/inp_unsort" # Не были сортированы
         self.logs_dir = self.base_dir / "dir_logs" # Хранение хешей
         self.vector_store_dir = self.base_dir / "dir_output/summarization" # Хранение обощений
 
