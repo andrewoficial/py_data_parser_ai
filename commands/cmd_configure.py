@@ -48,8 +48,14 @@ class ConfigureCommand(BaseCommand):
             print(f"[SKIP] .env file already exists: {self.env_file}")
         
         if not args.dry_run:
-            from core.settings import SettingsLoader
-            SettingsLoader.load_all(self.project_root)
+            from core.settings import (
+                get_path_config,
+                get_model_config,
+                get_db_config,
+                get_vector_config,
+                get_all
+            )
+            get_all()
             self.state.set_state("configured")
             print("[OK] Состояние системы: configured")
 

@@ -20,6 +20,7 @@ class PathConfig(BaseSettings):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
         self.sources_dir = self.base_dir / "dir_input" # Файлы для анализа
         self.json_dir = self.sources_dir / "dir_temp/inp_json" # Найденные json
         self.cpp_dir = self.sources_dir / "dir_temp/inp_cpp" # Найденные cpp
@@ -27,6 +28,7 @@ class PathConfig(BaseSettings):
         self.json_split_dir = self.sources_dir / "dir_temp/inp_json_split" # Найденные json после разделения
         self.cache_dir = self.base_dir / "dir_temp/file_hashes" # Хранение хешей
         self.cache_path = self.base_dir / "dir_temp/file_hashes/file_hashes.json" # Хранение файл
+        self.unsort_dir = self.sources_dir / "dir_temp/inp_unsort" # Не были сортированы
         self.logs_dir = self.base_dir / "dir_logs" # Хранение хешей
         self.vector_store_dir = self.base_dir / "dir_output/summarization" # Хранение обощений
 
@@ -36,9 +38,11 @@ class VectorConfig(BaseSettings):
     overlap: int = 32
     ignore_dirs: Set[str] = {"build", "test", "thirdparty"}
     file_extensions_cpp: Set[str] = {"cpp", "hpp", "h", "cc", "cxx"}
-    file_extensions_json: Set[str] = {"json"}
-    max_file_size: int = 2 * 1024 * 1024
-
+    file_extensions_json: Set[str] = {".json"}
+    file_extensions_qaa: Set[str] = {".txt"}
+    max_file_size: int = 2 * 9024 * 9024
+    supported_extensions: Set[str] = set().union(file_extensions_cpp, file_extensions_json, {"logs"})
+    #print(supported_extensions)
     model_config = {
         "extra": "allow",
         "env_prefix": "vector_",

@@ -30,6 +30,7 @@ class interactive_mode(BaseCommand):
             'clear',
             'help',
             'exit',
+            'check',
             'interactive'
         ], ignore_case=True)
 
@@ -75,9 +76,7 @@ class interactive_mode(BaseCommand):
     def setup_parser(self, parser: argparse.ArgumentParser):
         pass
 
-    def execute(self, args):
-        print("Инициализация...")
-        self.state.set_state("ready")         
+    def execute(self, args):        
         print("Switch to interactive mode")
         self._run_interactive()
 
