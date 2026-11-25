@@ -19,3 +19,33 @@ __pycache__/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# generated files (Migrate-Pass1)
+.idea/
+.gradle/
+.kotlin/
+build/
+out/
+logs/
+fyne-cross/
+data/
+lus-data/
+releases/
+__pycache__/
+.pio/
+.pioenvs/
+_local/
+*.jar
+*.class
+*.dex
+*.elf
+*.hex
+*.bin
+*.pyc
+*.log
+dependency-reduced-pom.xml
+local.properties
+*~
+*.lock
+*.exe
+
